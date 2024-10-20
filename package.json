@@ -4,21 +4,21 @@
   "description": "Repo for Node.js learning at RS School Node.js Course",
   "type": "module",
   "scripts": {
-    "start:dev": "cross-env NODE_ENV=development node dist/server.js",
-    "start:prod": "cross-env NODE_ENV=production node dist/server.js",
+    "start:dev": "npx cross-env NODE_ENV=development nodemon --exec node --loader ts-node/esm --no-warnings=ExperimentalWarning src/server.ts",
+    "start:prod": "npx cross-env NODE_ENV=production node dist/server.js",
     "build": "tsc"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^16.4.5",
     "uuid": "^10.0.0"
   },
   "devDependencies": {
     "@types/node": "^22.7.6",
     "@types/uuid": "^10.0.0",
     "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5",
     "eslint": "^9.12.0",
     "nodemon": "^3.1.7",
     "prettier": "^3.3.3",
