@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "start:dev": "npx cross-env NODE_ENV=development nodemon --exec node --loader ts-node/esm --no-warnings=ExperimentalWarning src/server.ts",
-    "start:prod": "npx cross-env NODE_ENV=production node dist/server.js",
+    "start:prod": "tsc && npx cross-env NODE_ENV=production node dist/server.js",
     "build": "tsc"
   },
   "keywords": [],
